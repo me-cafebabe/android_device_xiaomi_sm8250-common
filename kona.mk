@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Overlays
