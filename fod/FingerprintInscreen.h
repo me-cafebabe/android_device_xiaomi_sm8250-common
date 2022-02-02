@@ -9,6 +9,7 @@
 
 #include <vendor/lineage/biometrics/fingerprint/inscreen/1.0/IFingerprintInscreen.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
+#include <vendor/xiaomi/hardware/touchfeature/1.0/ITouchFeature.h>
 
 namespace vendor {
 namespace lineage {
@@ -22,6 +23,7 @@ using ::android::sp;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
+using ::vendor::xiaomi::hardware::touchfeature::V1_0::ITouchFeature;
 
 class FingerprintInscreen : public IFingerprintInscreen {
   public:
@@ -44,6 +46,7 @@ class FingerprintInscreen : public IFingerprintInscreen {
     Return<int32_t> getSize() override;
 
   private:
+    sp<ITouchFeature> mTouchFeatureService;
     sp<IXiaomiFingerprint> mXiaomiFingerprintService;
     int32_t mPositionX;
     int32_t mPositionY;
