@@ -55,7 +55,7 @@ Lights::Lights() {
 ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
     switch (id) {
         case (int)LightType::BACKLIGHT:
-            WriteToFile(kLCDFile, RgbaToBrightness(state.color));
+            WriteToFile(kLCDFile, RgbaToBrightness(state.color) * 8);
             break;
         case (int)LightType::BATTERY:
             mBattery = state;
