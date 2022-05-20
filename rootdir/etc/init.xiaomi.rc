@@ -6,6 +6,9 @@
 
 # Fingerprint
 on init
+    # FOD
+    chown system system /sys/touchpanel/fod_status
+
     chmod 0664 /dev/fortsense_fp
     chown system system /dev/fortsense_fp
 
