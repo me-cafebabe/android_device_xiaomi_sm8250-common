@@ -245,6 +245,14 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor
 
+# GSI
+ifeq ($(BUILDING_SSI),true)
+PRODUCT_PACKAGES += \
+    gsi_skip_mount.cfg \
+    init.gsi.rc \
+    init.vndk-nodef.rc
+endif
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
