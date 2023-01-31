@@ -147,7 +147,7 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # ( BOARD_SUPER_PARTITION_SIZE -
 
 # Partitions - reserved size
 ifneq ($(BUILDING_SSI),true)
-ifneq ($(WITH_GMS),true)
+ifneq ($(MIKU_GAPPS),true)
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1))
 SSI_PARTITIONS_RESERVED_SIZE := 1258291200
