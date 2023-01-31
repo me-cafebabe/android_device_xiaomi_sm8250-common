@@ -259,3 +259,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 include vendor/xiaomi/sm8250-common/BoardConfigVendor.mk
+
+# Inherit extra if exists
+-include vendor/extra/BoardConfigExtra.mk

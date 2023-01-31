@@ -499,3 +499,6 @@ $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
 
 # Extra
 EXTRA_DEVICE_BRACKET := high-end
+
+# Inherit extra if exists
+$(call inherit-product-if-exists, vendor/extra/product.mk)
